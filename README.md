@@ -48,6 +48,7 @@ Ce projet consiste en une **refonte complète du site web de la mairie de Beauva
 ```bash
 git clone https://github.com/Jordan10980/WebProject.git
 cd WebProject
+```
 
 ## ⚙️ Déploiement complet
 
