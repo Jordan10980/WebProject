@@ -48,3 +48,52 @@ Ce projet consiste en une **refonte complète du site web de la mairie de Beauva
 ```bash
 git clone https://github.com/Jordan10980/WebProject.git
 cd WebProject
+
+## ⚙️ Déploiement complet
+
+### 2. Build & push Docker images
+
+#### Frontend
+
+```bash
+cd frontend
+docker build -t user_docker/frontend .
+docker push user_docker/frontend
+
+#### Backend
+
+```bash
+cd ../backend
+docker build -t user_docker/backend .
+docker push user_docker/backend
+
+#### Démarrer Minikube
+
+```bash
+minikube start
+
+#### Déployer les services
+
+```bash
+kubectl apply -f k8s/mysql-deployment.yaml
+kubectl apply -f k8s/mysql-service.yaml
+
+kubectl apply -f k8s/backend-deployment.yaml
+kubectl apply -f k8s/backend-service.yaml
+
+kubectl apply -f k8s/frontend-deployment.yaml
+kubectl apply -f k8s/frontend-service.yaml
+
+#### Activer l’Ingress
+```bash
+kubectl apply -f k8s/ingress-front.yaml
+kubectl apply -f k8s/ingress-back.yaml
+
+Ajoute cette ligne à ton fichier /etc/hosts :
+
+```bash
+127.0.0.1 mairie-beauvais.local
+
+👉 Accès à l'application : https://mairie-beauvais.local
+
+
