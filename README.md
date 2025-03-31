@@ -70,13 +70,19 @@ docker build -t user_docker/backend .
 docker push user_docker/backend
 ```
 
-#### Démarrer Minikube
+### 3. Lancer Docker Desktop
+
+Avant tout, assure-toi que **Docker Desktop** est lancé sur ta machine.  
+C'est indispensable pour que Minikube puisse démarrer correctement.
+
+### 4. Démarrer Minikube
 
 ```bash
 minikube start
+minikube dashboard
 ```
 
-#### Déployer les services
+### 5. Déployer les services
 
 ```bash
 kubectl apply -f k8s/mysql-deployment.yaml
@@ -89,7 +95,7 @@ kubectl apply -f k8s/frontend-deployment.yaml
 kubectl apply -f k8s/frontend-service.yaml
 ```
 
-#### Activer l’Ingress
+### 6. Activer l’Ingress
 ```bash
 kubectl apply -f k8s/ingress-front.yaml
 kubectl apply -f k8s/ingress-back.yaml
@@ -102,5 +108,42 @@ Ajoute cette ligne à ton fichier /etc/hosts :
 ```
 
 👉 Accès à l'application : https://mairie-beauvais.local
+
+
+### 7. Activer le tunnel Minikube (accès aux services)
+
+Dans un terminal séparé (à laisser ouvert), exécute :
+
+```bash
+minikube tunnel
+```
+Cela permettra à ton navigateur d'accéder correctement à https://mairie-beauvais.local.
+
+### 8. Initialiser la base de données MySQL
+```bash
+kubectl exec -it $(kubectl get pods -l app=mysql -o jsonpath="{.items[0].metadata.name}") -- mysql -u root -p
+```
+Mot de passe : celui que tu as défini dans mysql-deployment.yaml
+
+```bash
+use Mairie
+```
+Puis, copie-colle le contenu du fichier bdd.sql (fourni dans le projet) dans le terminal MySQL pour créer les tables.
+
+### 9. Déployer la sécurité (RBAC)
+Pour restreindre les accès des services, applique les fichiers de sécurité :
+
+```bash
+kubectl apply -f k8s/serviceaccount-frontend.yaml
+kubectl apply -f k8s/role-frontend.yaml
+kubectl apply -f k8s/rolebinding-frontend.yaml
+
+kubectl apply -f k8s/serviceaccount-backend.yaml
+kubectl apply -f k8s/role-backend.yaml
+kubectl apply -f k8s/rolebinding-backend.yaml
+```
+
+
+
 
 
