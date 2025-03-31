@@ -23,3 +23,7 @@ frontend/node_modules/.cache/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Certificats TLS à ne pas versionner
+k8s/tls.crt
+k8s/tls.key
