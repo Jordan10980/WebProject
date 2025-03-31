@@ -143,6 +143,8 @@ kubectl apply -f k8s/role-backend.yaml
 kubectl apply -f k8s/rolebinding-backend.yaml
 ```
 
+Ces fichiers créent les comptes de service, les rôles et les droits limités associés au frontend et au backend.
+
 
 
 
