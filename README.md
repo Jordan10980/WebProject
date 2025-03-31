@@ -60,6 +60,7 @@ cd WebProject
 cd frontend
 docker build -t user_docker/frontend .
 docker push user_docker/frontend
+```
 
 #### Backend
 
@@ -67,11 +68,13 @@ docker push user_docker/frontend
 cd ../backend
 docker build -t user_docker/backend .
 docker push user_docker/backend
+```
 
 #### Démarrer Minikube
 
 ```bash
 minikube start
+```
 
 #### Déployer les services
 
@@ -84,16 +87,19 @@ kubectl apply -f k8s/backend-service.yaml
 
 kubectl apply -f k8s/frontend-deployment.yaml
 kubectl apply -f k8s/frontend-service.yaml
+```
 
 #### Activer l’Ingress
 ```bash
 kubectl apply -f k8s/ingress-front.yaml
 kubectl apply -f k8s/ingress-back.yaml
+```
 
 Ajoute cette ligne à ton fichier /etc/hosts :
 
 ```bash
 127.0.0.1 mairie-beauvais.local
+```
 
 👉 Accès à l'application : https://mairie-beauvais.local
 
