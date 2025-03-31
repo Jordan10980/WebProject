@@ -32,7 +32,6 @@ Ce projet consiste en une **refonte complète du site web de la mairie de Beauva
 
 ### 📦 Prérequis
 
-- macOS (ou tout système compatible avec Docker/Kubernetes)
 - [Node.js](https://nodejs.org/)
 - [PHP](https://www.php.net/)
 - [Docker](https://www.docker.com/)
