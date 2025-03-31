@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bba04ff3.css",
+    "main.js": "/static/js/main.55a5fa56.js",
+    "static/js/488.e7fcdc9d.chunk.js": "/static/js/488.e7fcdc9d.chunk.js",
+    "static/media/mairie.jpg": "/static/media/mairie.eac0f372c01488838e31.jpg",
+    "static/media/logo agglo.png": "/static/media/logo agglo.6fab38237882d86dfd85.png",
+    "static/media/default.jpeg": "/static/media/default.73db1592403661a47d9e.jpeg",
+    "static/media/transport2.jpeg": "/static/media/transport2.981243ef34f479c5c18e.jpeg",
+    "static/media/transport.jpeg": "/static/media/transport.61dcc963c5eae05481b9.jpeg",
+    "index.html": "/index.html",
+    "main.bba04ff3.css.map": "/static/css/main.bba04ff3.css.map",
+    "main.55a5fa56.js.map": "/static/js/main.55a5fa56.js.map",
+    "488.e7fcdc9d.chunk.js.map": "/static/js/488.e7fcdc9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bba04ff3.css",
+    "static/js/main.55a5fa56.js"
+  ]
+}

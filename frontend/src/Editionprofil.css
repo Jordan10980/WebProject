@@ -1,0 +1,79 @@
+.eprofil{
+    padding-bottom: 1rem;
+}
+
+.echamps{
+    height:30px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 10px;
+    background-color: whitesmoke;
+}
+
+.info {
+    padding-top: 0;
+    text-align: center;
+}
+
+.majbtn{
+    height:30px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.contain-2{
+    text-align: center;
+    display: inline-block;
+    background: white;
+    height: 450px;
+    width: 600px;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right:1rem ;
+    box-shadow: 0px 5px 20px var(--ColorLight);
+}
+
+.abtn{
+    height:30px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+
+.btn-bas-2{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 0 30px ;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 680px ){
+
+    .contain-2{
+        width:400px;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .contain-2{
+        width: 300px;
+    }
+
+    .echamps{
+        width: 270px;
+    }
+}

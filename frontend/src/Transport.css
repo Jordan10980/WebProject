@@ -1,0 +1,42 @@
+:root {
+	--mainColor: #bae1f5 ;
+	--ColorLight: grey;
+	--secondaryColor: #4682B4;
+}
+
+
+
+body .body {
+    padding-top: 5rem;
+    text-align: center;
+    background: var(--bgColor);
+}
+
+/* contrôle le h3 de transport, actualité et nous retrouver */
+body h3{
+    font-size: 2rem;
+    line-height: 1.8;
+    text-transform: none;
+    padding-bottom:  40px;
+}
+
+
+
+.body{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.text p{
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .body{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

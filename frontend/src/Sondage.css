@@ -1,0 +1,169 @@
+:root {
+	--mainColor: #bae1f5 ;
+	--ColorLight: grey;
+	--secondaryColor: #4682B4;
+}
+
+
+.mainContainer .poll{
+    padding-top: 10rem;
+    background-image: url(https://www.visitbeauvais.fr/content/uploads/2022/08/092_Jardin_du_Brule_Oise_Tourisme2019_SMELLINCKX.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.mainContainer .stitle{
+    text-align: center;
+}
+
+.mainContainer .page1{
+    display: inline-block;
+    background:linear-gradient(to bottom,
+    aliceblue 2%,
+    aliceblue 17%,
+    var(--secondaryColor) 17%,
+    var(--secondaryColor) 100%);
+    opacity: 85%;
+    height: 700px ;
+    width: 500px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem ;
+    padding-bottom: 2rem;
+    box-shadow: 0px 5px 20px var(--ColorLight);
+}
+
+.mainContainer input{
+    background-color: aliceblue;
+}
+
+
+
+.mainContainer .ant-picker{
+    background-color: aliceblue;
+    width: 270px;
+}
+
+.mainContainer label text{
+    opacity: 100%;
+}
+
+.mainContainer .page2{
+    display: inline-block;
+    background:linear-gradient(to bottom,
+    aliceblue 2%,
+    aliceblue 17%,
+    var(--secondaryColor) 17%,
+    var(--secondaryColor) 100%);
+    opacity: 85%;
+    height: auto ;
+    width: 500px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem ;
+    padding-bottom: 2rem;
+    box-shadow: 0px 5px 20px var(--ColorLight);
+}
+
+.mainContainer p{
+    padding-top: 1rem;
+}
+
+.mainContainer .ant-btn{
+    background-color: aliceblue;
+}
+
+.mainContainer .b-valider{
+    background-color: var(--mainColorLight);
+	border: none;
+	border-radius: 5%;
+	padding: 5px;
+	width: 100px;
+	font-size: 1.1rem;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.mainContainer .b-valider:hover:not(:disabled) {
+    color: var(--secondaryColor); 
+}
+
+@media only screen and (max-width: 580px ){
+
+     .mainContainer .page1, .mainContainer .page2{
+        width:300px;
+    }
+
+    .mainContainer .page1{
+        height: 1000px;
+
+        background:linear-gradient(to bottom,
+        aliceblue 2%,
+        aliceblue 12%,
+        var(--secondaryColor) 12%,
+        var(--secondaryColor) 100%);
+    }
+
+    .mainContainer .page2{
+
+        background:linear-gradient(to bottom,
+        aliceblue 2%,
+        aliceblue 20%,
+        var(--secondaryColor) 20%,
+        var(--secondaryColor) 100%);
+    }
+
+
+}
+
+ /*animation*/
+
+ .mainContainer .page1 {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .mainContainer .page2 {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .zoom {
+    transform: scale(1.1);
+  }
+  
+  .dezoom {
+    transform: scale(1);
+  }
+  
+  
+  p.response{
+    color: white;
+    font-size: 22px;
+  }
+
+
+
+  /* Résultat sondage css */
+
+  .page1 h3{
+    color: black;
+  }
+
+  .page1 h2{
+    color: black;
+    text-align: center;
+  }
+
+.page1{color:white;}
+
+  p.prenom, p.nom, p.age, p.city, p.foods, p.autre{
+    text-align: center;
+
+  }
+
+
+
+
+

@@ -1,0 +1,61 @@
+:root {
+	--mainColor: #87CEFA ;
+	--ColorLight: grey;
+	--secondaryColor: #4682B4;
+	--textColor: black;
+}
+
+.footer{
+    background: var(--mainColor);
+    text-align: center;
+
+}
+
+.footer .box-container .box{
+    padding-bottom: 1rem;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    color: var(--textColor);
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.footer .box-container .box p{
+    display: block;
+    font-size: 1rem;
+    padding:0.2rem 0;
+    color: var(--textColor);
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1rem;
+    padding:0.2rem 0;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+
+.footer .box-container .box a:hover {
+    color: var(--secondaryColor);
+}
+
+.logo img {
+    width: auto;
+    height: 70px;
+}
+
+.footer .credit{
+    color: var(--textColor);
+    padding: 1rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+    text-transform: none;
+}

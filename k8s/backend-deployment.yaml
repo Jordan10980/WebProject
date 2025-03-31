@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      serviceAccountName: backend-sa
+      imagePullSecrets:
+        - name: regcred
+      securityContext:
+        fsGroup: 101
+      containers:
+        - name: backend
+          image: jordan10980/backend:v3.1
+          ports:
+            - containerPort: 80
+          env:
+            - name: DB_HOST
+              value: "mysql-service"
+            - name: DB_NAME
+              value: "Mairie"
+            - name: DB_USER
+              value: "root"
+            - name: DB_PASSWORD
+              value: "rootpassword"
+  tls:
+  - hosts:
+      - mairie-beauvais.local
+    secretName: tls-secret
